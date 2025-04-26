@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servientrega - Rastreo de Envíos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #008f63;
+      --primary-dark: #006b4b;
+      --bg-light: #f9f9f9;
+      --text-dark: #1f1f1f;
+      --text-gray: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(to right, #007b5e, #00aa84);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin: 3rem 0;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .track-form input {
+      padding: 1rem;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-right: 1rem;
+      font-size: 1rem;
+    }
+
+    .track-form button {
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .track-form button:hover {
+      background: var(--primary-dark);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    .contact p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      background: #eeeeee;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+
+      .track-form input {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+
+      .track-form button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Servientrega</div>
+
+    <nav>
+      <a href="#rastreo">Rastreo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Envíos confiables. Rastreo instantáneo.</h1>
+    <p>Con Servientrega, tu paquete está siempre en buenas manos</p>
+  </div>
+
+  <div class="container">
+    <section id="rastreo" class="track-form">
+      <h2>Rastrea tu Envío</h2>
+      <p>Ingresa tu número de guía para conocer el estado actual de tu paquete:</p>
+      <form>
+        <input type="text" placeholder="Ej: 1234567890" required />
+        <button type="submit">Rastrear</button>
+      </form>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <ul>
+        <li>📦 Envíos nacionales e internacionales rápidos</li>
+        <li>🚛 Logística y distribución empresarial</li>
+        <li>🔒 Rastreo en tiempo real 24/7</li>
+        <li>📍 Entregas programadas y a demanda</li>
+      </ul>
+    </section>
+
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos una empresa con más de 10 años de experiencia conectando negocios, personas y ciudades a través de soluciones de logística inteligente. Nuestro compromiso es ofrecerte rapidez, seguridad y una atención de primer nivel.</p>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p>📍 Dirección: Calle 123, Ciudad Central</p>
+      <p>📞 Teléfono: +57 300 000 0000</p>
+      <p>📧 Email: contacto@servientrega.com</p>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Servientrega. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
